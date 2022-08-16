@@ -28,3 +28,11 @@ for (let i = 0; i < btnsOpenModal.length; i++) {
 // clicks on "x" or overlay to close modal window.
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        if (!modal.classList.contains('hidden')) {
+            closeModal();
+        }
+    }
+});
